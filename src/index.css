@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.banner-title {
+    background: -webkit-linear-gradient(
+        249deg,
+        rgba(255, 255, 255, 0.4220281862745098) 0%,
+        rgba(57, 52, 52, 0.47524947478991597) 49%,
+        rgba(255, 255, 255, 0.47524947478991597) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.category_list a.active-link {
+    color: #7f5bff; /* Purple color when active */
+}
+
+.category_list a .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #7f5bff; /* Underline color */
+    border-radius: 4px;
+    transition: width 0.3s ease-in-out;
+}
+
+.category_list a:hover .underline,
+.category_list a.active-link .underline {
+    width: 100%; /* Expands underline on hover or when active */
+}
+
+.category_list a {
+    color: #a3a3a3; /* Default color */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
